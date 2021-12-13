@@ -98,7 +98,7 @@
 
 		myReturn += `<p>
             <img src="images/${coffee.pic}" alt="${coffee.alt}" id="coffee" />
-           <strong>${coffee.weekend}'s Coffee Special:</strong>${coffee.color}'s daily coffee special is <strong>${coffee.coffee}</strong>, ${coffee.description}
+           <strong>${coffee.weekday}'s Coffee Special:</strong>${coffee.color}'s daily coffee special is <strong>${coffee.coffee}</strong>, ${coffee.description}
        </p>`;
 
 		return myReturn; 
@@ -137,12 +137,12 @@
 				alt: "a pic of cold brew",
 				color: "purple",
 				description: `Our Cold berw is the best!`, 
-				coffee: "Col Brew",
+				coffee: "Cold Brew",
 				weekday: "Sunday"
 			}
 		break; 
 
-		case 1:
+		case 1:	
 			today = "Monday";
 			coffee = {
 
@@ -220,7 +220,7 @@
 	
 	}
 
-	document.getElementById("coffeeTarget").InnerHTML = coffeeTemplate(coffee);
+	document.getElementById("coffeeTarget").innerHTML = coffeeTemplate(coffee);
 
 	document.querySelector("html").style.backgroundColor = coffee.color;
 
